@@ -14,11 +14,13 @@ Based on the problem statement, we had three informations:
 3. type = 'murder'
 
 **Query**
+
 `select *
 from crime_scene_report
 where date = '20180115' and city = 'SQL City' and type='murder';`
 
 **output**
+
 ![Part 1](https://prnt.sc/3En0-jTCHN9Q)
 
 ### Find interview records where name contains annabel and address_street_name is 'Franklin Ave'
@@ -35,10 +37,12 @@ from person
 where name like '%annabel%' and address_street_name = 'Franklin Ave');`
 
 **output**
+
 ![Part 2](https://prnt.sc/1COF2iDTTdgl)
 
 ### Select all membership_id and their respective person_id where check_in_date is '20180109' from the Gym's check in table. If there are interview transcripts, include them. If not, show null
 **Query**
+
 `select temp.membership_id, temp.person_id, i.transcript
 from (select membership_id, person_id
 from get_fit_now_check_in ci, get_fit_now_member m
@@ -46,6 +50,7 @@ where ci.membership_id = m.id and check_in_date = '20180109') as temp left join 
 on temp.person_id = i.person_id;`
 
 **output**
+
 ![Part 3](https://prnt.sc/D0jn6-oe47lS)
 
 ### Caught the hitman, search for person_id that matches the descriptions given by him.
@@ -56,6 +61,7 @@ Based on the previous output, we have four information we can search in drivers_
 4. car_model = 'Model S'
 
 **Subquery 1**
+
 `select p.id,p.name
 from person p, drivers_license d
 where p.license_id = d.id and hair_color = 'red' 
@@ -67,6 +73,7 @@ Additionally, we have two information from facebook_event_checkin table:
 2. date like '201712%';
 
 **Subquery 2**
+
 `select person_id from facebook_event_checkin
 where date like '201712%' 
 group by person_id 
@@ -74,6 +81,7 @@ having count(*) =3;`
 
 Now, we merge the query to retrieve the suspects.
 **Mereged Query**
+
 `select t1.id, t1.name
 from (select p.id,p.name
 from person p, drivers_license d
@@ -83,12 +91,15 @@ where date like '201712%' group by person_id having count(*) >=3) as t2
 where t1.id = t2.person_id;`
 
 **output**
+
 ![Part 4](https://prnt.sc/jvgGVOT6RanP)
 
 ### We suspect that Miranda Priestly is the mastermind of the murder.
 **Query**
+
 `INSERT INTO solution VALUES (1, 'Miranda Priestly');
         SELECT value FROM solution;`
 
 **output**
+
 ![Solution](https://prnt.sc/QwkB8wDyrlBq)
