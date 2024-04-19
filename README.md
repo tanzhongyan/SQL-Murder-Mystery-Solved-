@@ -21,7 +21,7 @@ where date = '20180115' and city = 'SQL City' and type='murder';`
 
 **output**
 
-![Part 1](https://prnt.sc/3En0-jTCHN9Q)
+![Part 1](1.jpg)
 
 ### Find interview records where name contains annabel and address_street_name is 'Franklin Ave'
 Based on the previous output, we have two information:
