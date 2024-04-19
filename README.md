@@ -14,10 +14,11 @@ Based on the problem statement, we had three informations:
 3. type = 'murder'
 
 **Query**
-
-`select *
+```
+select *
 from crime_scene_report
-where date = '20180115' and city = 'SQL City' and type='murder';`
+where date = '20180115' and city = 'SQL City' and type='murder';
+```
 
 **output**
 
@@ -45,11 +46,13 @@ where name like '%annabel%' and address_street_name = 'Franklin Ave');
 ### Select all membership_id and their respective person_id where check_in_date is '20180109' from the Gym's check in table. If there are interview transcripts, include them. If not, show null
 **Query**
 
-`select temp.membership_id, temp.person_id, i.transcript
+```
+select temp.membership_id, temp.person_id, i.transcript
 from (select membership_id, person_id
 from get_fit_now_check_in ci, get_fit_now_member m
 where ci.membership_id = m.id and check_in_date = '20180109') as temp left join interview i
-on temp.person_id = i.person_id;`
+on temp.person_id = i.person_id;
+```
 
 **output**
 
@@ -64,11 +67,13 @@ Based on the previous output, we have four information we can search in drivers_
 
 **Subquery 1**
 
-`select p.id,p.name
+```
+select p.id,p.name
 from person p, drivers_license d
 where p.license_id = d.id and hair_color = 'red' 
 and car_make = 'Tesla' and car_model = 'Model S' 
-and height between 65 and 67;`
+and height between 65 and 67;
+```
 
 Additionally, we have two information from facebook_event_checkin table:
 1. count(*) = 3
@@ -76,21 +81,25 @@ Additionally, we have two information from facebook_event_checkin table:
 
 **Subquery 2**
 
-`select person_id from facebook_event_checkin
+```
+select person_id from facebook_event_checkin
 where date like '201712%' 
 group by person_id 
-having count(*) =3;`
+having count(*) =3;
+```
 
 Now, we merge the query to retrieve the suspects.
 **Mereged Query**
 
-`select t1.id, t1.name
+```
+select t1.id, t1.name
 from (select p.id,p.name
 from person p, drivers_license d
 where p.license_id = d.id and hair_color = 'red' 
 and car_make = 'Tesla' and car_model = 'Model S' and height between 65 and 67) as t1, (select person_id from facebook_event_checkin
 where date like '201712%' group by person_id having count(*) >=3) as t2
-where t1.id = t2.person_id;`
+where t1.id = t2.person_id;
+```
 
 **output**
 
@@ -99,8 +108,10 @@ where t1.id = t2.person_id;`
 ### We suspect that Miranda Priestly is the mastermind of the murder.
 **Query**
 
-`INSERT INTO solution VALUES (1, 'Miranda Priestly');
-        SELECT value FROM solution;`
+```
+INSERT INTO solution VALUES (1, 'Miranda Priestly');
+        SELECT value FROM solution;
+```
 
 **output**
 
