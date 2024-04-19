@@ -89,6 +89,7 @@ having count(*) =3;
 ```
 
 Now, we merge the query to retrieve the suspects.
+
 **Mereged Query**
 
 ```
