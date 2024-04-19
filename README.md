@@ -1,4 +1,4 @@
-# SQL-Murder-Mystery-Solved-
+# SQL-Murder-Mystery-Solved!!!
 
 ## Introduction
 I am [Zhong Yan](https://www.linkedin.com/in/zhong-yan-tan/), a year 1 student from SMU Information Systems. While preparing for my exam, I came across [SQL Murder Mystery](https://mystery.knightlab.com/), an SQL game to learn SQL basics. To demonstrate what I have learnt, I decided to document the process of my solution step by step. Open to feedback and criticism as I am still new. Enjoy!
@@ -23,7 +23,7 @@ where date = '20180115' and city = 'SQL City' and type='murder';
 **output**
 
 ![Part 1](1.jpg)
-
+---
 ### Find interview records where name contains annabel and address_street_name is 'Franklin Ave'
 Based on the previous output, we have two information:
 1. name like '%annabel%'
@@ -42,7 +42,7 @@ where name like '%annabel%' and address_street_name = 'Franklin Ave');
 **output**
 
 ![Part 2](2.jpg)
-
+---
 ### Select all membership_id and their respective person_id where check_in_date is '20180109' from the Gym's check in table. If there are interview transcripts, include them. If not, show null
 **Query**
 
@@ -57,7 +57,7 @@ on temp.person_id = i.person_id;
 **output**
 
 ![Part 3](3.jpg)
-
+---
 ### Caught the hitman, search for person_id that matches the descriptions given by him.
 Based on the previous output, we have four information we can search in drivers_license table:
 1. Height between 65 and 67
@@ -104,7 +104,7 @@ where t1.id = t2.person_id;
 **output**
 
 ![Part 4](4.jpg)
-
+---
 ### We suspect that Miranda Priestly is the mastermind of the murder.
 **Query**
 
