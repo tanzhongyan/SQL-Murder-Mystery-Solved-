@@ -117,3 +117,8 @@ INSERT INTO solution VALUES (1, 'Miranda Priestly');
 **Output**
 
 ![Solution](5.jpg)
+
+## YAY THE MASTERMIND HAS BEEN CAUGHT!
+Through the use of joins, subqueries and aggregate functions, we managed to catch the mastermind of the murder. 
+
+SQL is not only an important skill for catching murderes, it is a necessary skill in the workpalce!
