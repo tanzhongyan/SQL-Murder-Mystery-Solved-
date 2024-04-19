@@ -20,7 +20,7 @@ from crime_scene_report
 where date = '20180115' and city = 'SQL City' and type='murder';
 ```
 
-**output**
+**Output**
 
 ![Part 1](1.jpg)
 ---
@@ -39,7 +39,7 @@ from person
 where name like '%annabel%' and address_street_name = 'Franklin Ave');
 ```
 
-**output**
+**Output**
 
 ![Part 2](2.jpg)
 ---
@@ -90,7 +90,7 @@ having count(*) =3;
 
 Now, we merge the query to retrieve the suspects.
 
-**Mereged Query**
+**Merged Query**
 
 ```
 select t1.id, t1.name
@@ -102,7 +102,7 @@ where date like '201712%' group by person_id having count(*) >=3) as t2
 where t1.id = t2.person_id;
 ```
 
-**output**
+**Output**
 
 ![Part 4](4.jpg)
 ---
@@ -114,6 +114,6 @@ INSERT INTO solution VALUES (1, 'Miranda Priestly');
         SELECT value FROM solution;
 ```
 
-**output**
+**Output**
 
 ![Solution](5.jpg)
