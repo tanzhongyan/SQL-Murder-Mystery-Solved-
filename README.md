@@ -38,7 +38,7 @@ where name like '%annabel%' and address_street_name = 'Franklin Ave');`
 
 **output**
 
-![Part 2](https://prnt.sc/1COF2iDTTdgl)
+![Part 2](2.jpg)
 
 ### Select all membership_id and their respective person_id where check_in_date is '20180109' from the Gym's check in table. If there are interview transcripts, include them. If not, show null
 **Query**
@@ -51,7 +51,7 @@ on temp.person_id = i.person_id;`
 
 **output**
 
-![Part 3](https://prnt.sc/D0jn6-oe47lS)
+![Part 3](3.jpg)
 
 ### Caught the hitman, search for person_id that matches the descriptions given by him.
 Based on the previous output, we have four information we can search in drivers_license table:
@@ -92,7 +92,7 @@ where t1.id = t2.person_id;`
 
 **output**
 
-![Part 4](https://prnt.sc/jvgGVOT6RanP)
+![Part 4](4.jpg)
 
 ### We suspect that Miranda Priestly is the mastermind of the murder.
 **Query**
@@ -102,4 +102,4 @@ where t1.id = t2.person_id;`
 
 **output**
 
-![Solution](https://prnt.sc/QwkB8wDyrlBq)
+![Solution](5.jpg)
