@@ -27,6 +27,7 @@ Based on the previous output, we have two information:
 2. address_street_name = 'Franklin Ave'
 
 **Query**
+
 `select *
 from interview
 where person_id in (select id
