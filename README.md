@@ -30,10 +30,10 @@ Based on the previous output, we have two information:
 
 **Query**
 
-`select *
-from interview
-where person_id in (select id
-from person
+`select *\
+from interview\
+where person_id in (select id\
+from person\
 where name like '%annabel%' and address_street_name = 'Franklin Ave');`
 
 **output**
